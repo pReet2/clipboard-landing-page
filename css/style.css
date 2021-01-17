@@ -1,0 +1,271 @@
+/**
+* DIVISÃO LÓGICA DO CSS
+*
+* reset 
+* global
+* logo
+* fontes & tiutulos
+* left
+* right
+* Footerff
+* Responsive
+*
+*/
+/*|----------------->> document RESET <<-----------------|*/
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, a, em, img, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, article, footer, header, nav, section, main {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+blockquote, q {quotes: none;}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+a {text-decoration: none;}
+ol, 
+ul {list-style: none;}
+
+button{
+  outline: none; 
+  cursor: pointer;
+  border: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, ul {
+	font-size: 1em;
+	font-weight: normal;
+}
+
+/*|----------------->> Layout <<-----------------|*/
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+}
+
+body{ 
+  color: var(--Dark-Grayish-Blue);
+  font-family: 'Bai Jamjuree', sans-serif;
+}
+
+.container-center{
+  padding: 0% 8%;
+}
+/*|----------------->> global properties <<-----------------|*/
+
+button{
+  color: #fff;
+  
+  font-size: .9em;
+  width: 170px;
+  height: 40px;
+  margin-right: 1%;
+  
+  border-radius: 50px; 
+  -webkit-box-shadow: 1px 0px 5px rgba(50, 50, 50, 0.77);
+     -moz-box-shadow: 1px 0px 5px rgba(50, 50, 50, 0.77);
+          box-shadow: 1px 0px 5px rgba(50, 50, 50, 0.77);
+}  /*Border box and  your compatibility with all browsers */
+
+
+.flex{ 
+  margin: 0 auto;
+  display: flex;
+}
+
+.flex div{
+  width: 100%;
+  margin-right: 5%;
+}
+
+/*--- all sections ---|*/
+section{  
+  margin-bottom: 7%;
+}
+
+
+#acess-clipboard img{width: 60%;}
+
+
+/*--- all colors for the document ---|*/
+:root{
+  --Cyan: hsl(171, 66%, 44%);
+  --Light-Blue: hsl(233, 100%, 69%);
+  --Dark-Grayish-Blue: hsl(210, 10%, 33%);
+  --Grayish-Blue: hsl(201, 11%, 66%);
+}
+
+
+.description{width: 48%;}
+
+/*|----------------->> Header <<-----------------|*/
+header {
+  background-image: url('../images/bg-header-desktop.png');
+  background-size: cover;
+  padding: 10% 0 5% 0;
+}
+
+#logo{
+  width: 10%;
+}
+
+
+/*|----------------->> fonts <<-----------------|*/
+
+.text-center{
+  text-align: center;
+}
+
+h1{
+  font-size: 2.3em;
+  font-weight: 600;
+}
+
+h2{
+  font-size: 2em;
+  font-weight: 600;
+}
+
+h3{
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+h4{
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+p{
+  font-weight: 400;
+  font-size: 1.125;
+
+  line-height: 1.9em;
+  opacity: 0.6;
+
+  padding: 2% 0;
+  margin: 0 auto;
+}
+
+
+/*|----------------->> Section history <<-----------------|*/
+.btn-green{background-color: var(--Cyan);}
+.btn-blue{background-color: var(--Light-Blue);}
+
+/*|----------------->> Section keep-track <<-----------------|*/
+
+.keep-track-info {
+  display: flex;
+  align-content: flex-end;
+  justify-content: space-between;
+}
+.keep-track-info img {
+  margin-left: -7%;
+}
+.keep-track-info aside {
+  margin-left: 10%;
+  padding-right: 10%;
+}
+
+.keep-track-info aside h3 {
+  margin-top: 50px;
+}
+
+
+
+/*|----------------->> Section supercharge<<-----------------|*/
+
+.icon-supercharge{
+  max-width: 12%;
+  margin: 10% 0;
+}
+
+
+/*|----------------->> Section channel s<<-----------------|*/
+
+.img-channel{
+  width: 100%
+}
+/*|----------------->> Footer <<-----------------|*/
+.footer {
+  background-color: hsl(201, 11%, 66%, 0.1);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: left;
+  padding: 30px 0;
+}
+.footer img {
+  width: 50px;
+  height: 50px;
+}
+.footer .footer-links {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: -50px;
+}
+.footer-links ul {
+  list-style-type: none;
+  font-size: 16px;
+  margin-left: 70px;
+}
+.footer-links ul li {
+  margin-top: 15px;
+}
+
+.social-icons{
+  font-size: 25px;
+}
+
+
+/*-- ATTRIBUTION */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 975px) {
+  .flex{ 
+    display: block;
+  }
+
+  .container{
+    padding: 2%;
+    text-align: center;
+  }
+  img{width: 80%;}
+  .description{width: 65%}
+
+  #logo{
+    width: 25%;
+    padding-top: 20%;
+  }
+
+  /* fonts size */
+  h1{ font-size: 2em;    }
+  h2{ font-size: 1.65em; }
+  p { padding: 5% 0;    }
+
+  button{
+    width: 90%;
+    height: 40px;
+    margin: 3%;
+  }
+  
+
+} 

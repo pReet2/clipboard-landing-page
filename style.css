@@ -1,0 +1,355 @@
+/*==================================
+
+  ARQUITETURA DO CSS
+
+  1. Reset
+  2. Layout
+  3. Header
+  4. Gerais
+  5. Hierarquia de títulos
+  6. Sections
+  7. Rodapé [Footer]
+  . Responvidade [Medias queries]
+
+==================================*/
+
+/*|=======================>>  RESET  <<=======================|*/
+
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, a, em, img, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, article, footer, header, nav, section, main {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+blockquote, q {quotes: none;}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+a {text-decoration: none;}
+ol, ul {list-style: none;}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+button{
+  outline: none; 
+  cursor: pointer;
+  border: 0;
+}
+
+
+/*|=======================>> Layout <<=======================|*/
+
+/* Correção de bugs */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;
+  font-family: "open sans" , Arial, sans-serif;
+}
+
+body {
+  font-size: 18px;
+  line-height: 1.8;
+  font-weight: 10;
+  font-family: 'Bai Jamjuree', sans-serif;
+  color: var(--Grayish-Blue);
+
+  background: url(images/bg-header-desktop.png) no-repeat top;
+}
+
+.container {
+  text-align: center;
+}
+
+section{
+  margin: 5% 0;
+}
+
+
+
+/*|=======================>> header  <<=======================|*/
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .logo {
+  width: 120px;
+  margin: 120px 0 30px 0;
+}
+
+.header p {
+  width: 50%;
+}
+
+
+/*|=======================>> Gerais <<=======================|*/
+.flex-direction-column{
+  flex-direction: column;
+}
+
+p{
+  padding: 2% 0;
+}
+
+button{
+  font-size: 15px;
+  font-family: 'Bai Jamjuree', sans-serif;
+  color: white;
+
+  padding: 13px 45px;
+  margin: 30px 0 100px 0;
+
+          border-radius: 30px;
+  -webkit-border-radius: 30px;
+     -moz-border-radius: 30px;
+      -ms-border-radius: 30px;
+       -o-border-radius: 30px;
+}
+
+
+:root {
+  --Strong-Cyan: hsl(171, 66%, 44%);
+  --Light-Blue: hsl(233, 100%, 69%);
+  --Dark-Grayish-Blue: hsl(210, 10%, 33%);
+  --Grayish-Blue: hsl(201, 11%, 66%);
+}
+/*|=======================>> Titulos  <<=======================|*/
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--Dark-Grayish-Blue);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+/*|=======================>> introduction  <<=======================|*/
+.introduction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  .introduction p {
+    width: 55%;
+  }
+
+/*|=======================>> SECTION KEEP-TRACK  <<=======================|*/
+
+.keep-track {
+  display: flex;
+  align-content: flex-end;
+  justify-content: space-between;
+}
+
+  .keep-track aside {
+    font-size: .9em;
+    text-align: left;
+    margin-left: 10%;
+    padding-right: 10%;
+  }
+
+    .keep-track aside h3 {
+      margin-top: 50px;
+    }
+
+/*|=======================>> SECTION ACESS-CLIPBOARD  <<=======================|*/
+
+.acess-clipboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  .acess-clipboard p {
+    width: 50%;
+  }
+
+  /*|=======================>> SECTION BENEFITS  <<=======================|*/
+  .benefits {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 15px;
+}
+
+.benefits section {
+    width: 300px;
+}
+/*|=======================>> SECTION SPONSORS <<=======================|*/
+.sponsors {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+/*|=======================>> SECTION DOWNLOAD <<=======================|*/
+.download {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.download p {
+  width: 50%;
+}
+
+/*|=======================>> SECTION SUPERCHARGE <<=======================|*/
+
+
+
+
+/*=======================----->> CALL ACTION <<=======================-----*/
+/* Chamada para o botão de download */
+
+.call-action button{
+  border-bottom: 3px solid rgba(24, 104, 92, 0.2);
+  box-shadow: 0 10px 10px hsl(171, 65%, 44%, .2);;
+}
+
+  .ios {
+    background-color: var(--Strong-Cyan);
+  }
+
+
+  .mac {
+    background-color: var(--Light-Blue, hsl(233, 100%, 69%));
+    margin-left: 10px;
+  }
+
+
+/*=======================----->> FOOTER <<=======================-----*/
+
+.footer {
+  text-align: left;
+  background-color: hsl(201, 11%, 66%, 0.1);
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.footer img {
+  width: 50px;
+  height: 50px;
+}
+
+
+.footer-links {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: -50px;
+}
+
+  .footer-links ul {
+    list-style-type: none;
+    font-size: 16px;
+    margin-left: 70px;
+  }
+    .footer-links ul li {
+      margin-top: 15px;
+    }
+
+
+
+
+  .social-media-links img {
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+  }
+
+
+.attribution {
+  font-size: .8em;
+  margin: 1% 0;
+  text-align: center;
+}
+
+.attribution a {color: hsl(228, 45%, 44%);}
+
+
+/* -------------------------------- MOBILE VIEW ---------------------------------- */
+
+@media only screen and (max-width: 1000px){
+  section{margin: 10% 0;}
+    .header p {
+        width: 90%;
+    }
+    
+    .keep-track,
+    .benefits,
+    .sponsors{
+        flex-direction: column;
+    }
+
+    
+    button {
+        display: block;
+        margin: 20px 0;
+        width: 250px;
+        font-size: 1em;
+    }
+      .mac{margin-left: 0;}
+
+
+  
+
+    .keep-track img, 
+    .acess-clipboard img {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    
+    .keep-track aside {
+      text-align: center;
+      margin-left: 0%;
+      padding-right: 0%;
+    }
+
+    .keep-track aside p{  
+      margin: 0 auto;
+      width: 60%;
+    }
+
+    .sponsors img {
+      margin: 5% 0;
+  }
+ 
+    .footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .footer .footer-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0;
+    }
+
+
+    .footer-links ul, 
+    .footer-links ul li {
+        margin: 0;
+        text-align: center;
+    }
+    .footer-links li {
+        line-height: 3;
+    }
+
+}
